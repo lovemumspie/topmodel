@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+	@section('styles')
+	@show
   </head>
 
   <body>
@@ -41,10 +43,10 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
 
-            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="{{asset('aboutmmmmitchel')}}" class="nav-link">About</a></li>
             <li class="nav-item"><a href="model.html" class="nav-link">Models</a></li>
             <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="{{asset ('tanyakruzhaeva')}}" class="nav-link">Contact</a></li>
 
 			@guest
                             <li class="nav-item">
