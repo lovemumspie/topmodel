@@ -19,6 +19,10 @@ html {
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent; }
 
+.card {
+	
+}
+
 @-ms-viewport {
   width: device-width; }
 

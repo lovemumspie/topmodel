@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT:400,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/animate.css">
 
     <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -44,7 +45,7 @@
           <ul class="navbar-nav ml-auto">
 
             <li class="nav-item"><a href="{{asset('aboutmmmmitchel')}}" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="model.html" class="nav-link">Models</a></li>
+            <li class="nav-item"><a href="{{asset('models')}}" class="nav-link">Models</a></li>
             <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
             <li class="nav-item"><a href="{{asset ('tanyakruzhaeva')}}" class="nav-link">Contact</a></li>
 
@@ -174,7 +175,8 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
-
+	@section('scripts')
+	@show
   </body>
 
 </html>
