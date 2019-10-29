@@ -23,28 +23,34 @@
                 <div class="card-body">
 <form method="post" action="{{asset('home')}}">
 	{!! csrf_field()!!}
-
+@if (count($errors) > 0)
+	@foreach ($errors->all() as $err)
+<div>
+{{ $err}}
+</div>
+	@endForeach
+@endif
   <div class="form-group">
-   <label for="YourName">Your full  Name</label>
-    <input type="text"  name="YourName" class="form-control" id="YourName" aria-describedby="TextName" placeholder="Enter TextName">
+   <label for="title">Your full  Name</label>
+    <input type="text"  name="title" class="form-control" id="title" aria-describedby="TextName" placeholder="Enter TextName">
      
-	 <label for="TextName">Say somth about yourself </label>
-    <input type="text" class="form-control"  name="TextName"id="TextName" aria-describedby="text" placeholder="Enter text">
+	 <label for="excerpt">Say somth about yourself </label>
+    <input type="text" class="form-control"  name="excerpt" id="excerpt aria-describedby="text" placeholder="Enter text">
 	
-	     <label for="FullText">Say fullful description your prfrrences in work area</label>
-    <textarea class="form-control" name="TextAbout" id="TextAbout" aria-describedby="Fulltext" placeholder="Enter full description text">Enter full description text </textarea>
+	     <label for="body">Say fullful description your prfrrences in work area</label>
+    <textarea class="form-control" name="body" id="body" aria-describedby="Fulltext" placeholder="Enter full description text">Enter full description text </textarea>
 	
 	<div>
-	     <label for="typeOfWork">Say full TextName</label>
-		  <input type="checkbox" class="form-control" id="typeOfWork" aria-describedby="typeOfWork" name="photograph" value="photograph">photograph<Br>
-   <input type="checkbox" class="form-control" id="typeOfWork" aria-describedby="typeOfWork" name="model" value="model">model<Br> 
-   <input type="checkbox" class="form-control" id="typeOfWork" aria-describedby="typeOfWork" name="studio" value="studio">studio<Br> 
-      <input type="checkbox" class="form-control" id="typeOfWork" aria-describedby="typeOfWork" name="muah" value="MUAH">MUAH<Br> 
+	     <label for="status" name = "status" >Say full TextName</label>
+		  <input type="rA" class="form-control" id="meta_keywords" aria-describedby="typeOfWork" name="meta_keywords" value="photograph">photograph<Br>
+   <input type="checkbox" class="form-control" id="meta_description" aria-describedby="typeOfWork" name="meta_description" value="model">model<Br> 
+   <input type="checkbox" class="form-control" id="seo_title" aria-describedby="typeOfWork" name="seo_title" value="studio">studio<Br> 
+      <input type="checkbox" class="form-control" id="slug" aria-describedby="typeOfWork" name="slug" value="MUAH">MUAH<Br> 
     </div>
 	   
  
-   <label for="Photo"  class="form-control" name="Photo" id="Photo">Your photo</label>
-    <input type="file" class="form-control" id="Photo" aria-describedby="Photo"  >
+   
+    <input type="file" for="image" class="form-control" id="image" name="image" aria-describedby="Photo"  >
  
  
     <label for="Email">Email address</label>

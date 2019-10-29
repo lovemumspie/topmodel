@@ -1,6 +1,6 @@
 <?php
 
-namespace TCG\Voyager\Models;
+namespace App;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
@@ -16,11 +16,11 @@ class Post extends Model
         Resizable;
 
     protected $translatable = ['title', 'seo_title', 'excerpt', 'body', 'slug', 'meta_description', 'meta_keywords'];
-
+	public $filable = [ 'author_id', 'category_id', 'title', 'seo_title', 'excerpt', 'body', 'image', 'slug', 'meta_description', 'meta_keywords', 'status', 'featured'];
     const PUBLISHED = 'PUBLISHED';
 
     protected $guarded = [];
-	$filable = [ 'author_id', 'category_id', 'title', 'seo_title', 'excerpt', 'body', 'image', 'slug', 'meta_description', 'meta_keywords', 'status', 'featured'];
+
     public function save(array $options = [])
     {
         // If no author has been assigned, assign the current user's id as the author of the post

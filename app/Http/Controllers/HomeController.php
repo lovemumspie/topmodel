@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
+use App\Http\requests\PostRequest;
+use App\Post;
 class HomeController extends Controller
 {
     /**
@@ -26,13 +26,17 @@ class HomeController extends Controller
         return view('home');
     }
 	
-	public function postIndex() {
+	public function postIndex(PostRequest $r) {
+		$r['status']= 'PUBLISHED';
+		 
+		Post::create ($r->all());
 		
-		dd($_POST);
+	return redirect()->back();
+	//	dd($_POST);
 		
 	}
 
 	
-}
+	}
 
 
